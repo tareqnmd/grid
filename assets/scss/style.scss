@@ -5,3 +5,41 @@
 body {
 	font-family: $font-family;
 }
+
+.grid-template-details {
+	// grid-template-columns: 100px 200px;
+	// grid-template-rows: 100px 150px 200px;
+	// grid-template-columns: 100px auto 200px;
+	// grid-template-rows: 100px 150px auto;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 2fr 3fr;
+}
+
+.grid-template-short {
+	// grid-template: 100px 150px 200px/ 100px 200px;
+	// grid-template: 100px 150px auto/ 100px auto 200px;
+	grid-template: 1fr 2fr 3fr/ 1fr 2fr;
+}
+
+.grid-gap-details {
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+}
+
+.grid-gap-short {
+	grid-gap: 5px;
+}
+
+.grid {
+	display: grid;
+	@extend .grid-template-short;
+	@extend .grid-gap-short;
+}
+
+.item {
+	background-color: $bg-color;
+	color: $font-color;
+	font-weight: $font-weight;
+	text-align: center;
+	padding: 10px 0;
+}

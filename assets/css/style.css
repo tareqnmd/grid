@@ -3,4 +3,34 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.grid-template-details {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr 3fr;
+}
+
+.grid-template-short, .grid {
+  grid-template: 1fr 2fr 3fr/1fr 2fr;
+}
+
+.grid-gap-details {
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.grid-gap-short, .grid {
+  grid-gap: 5px;
+}
+
+.grid {
+  display: grid;
+}
+
+.item {
+  background-color: #23a36e;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+
 /*# sourceMappingURL=style.css.map */
