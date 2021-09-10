@@ -5,11 +5,11 @@ body {
 
 .grid-template-details {
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .grid-template-short, .grid {
-  grid-template: 1fr 2fr 3fr/1fr 2fr;
+  grid-template: 50px auto 50px/repeat(12, 1fr);
 }
 
 .grid-gap-details {
@@ -21,7 +21,12 @@ body {
   grid-gap: 5px;
 }
 
+.grid-areas, .grid {
+  grid-template-areas: "a a a a a a a a a a a a" "b b c c c c d d d d e e " "f f f f f f f f f f f f ";
+}
+
 .grid {
+  height: 100vh;
   display: grid;
 }
 
@@ -31,6 +36,30 @@ body {
   font-weight: bold;
   text-align: center;
   padding: 10px 0;
+}
+
+.one {
+  grid-area: a;
+}
+
+.two {
+  grid-area: b;
+}
+
+.three {
+  grid-area: c;
+}
+
+.four {
+  grid-area: d;
+}
+
+.five {
+  grid-area: e;
+}
+
+.six {
+  grid-area: f;
 }
 
 /*# sourceMappingURL=style.css.map */
