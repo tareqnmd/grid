@@ -25,6 +25,42 @@ body {
   grid-template-areas: "a a a a a a a a a a a a" "b b c c c c d d d d e e " "f f f f f f f f f f f f ";
 }
 
+.grid-auto-rows {
+  grid-auto-rows: 1fr;
+}
+
+.grid-auto-fit {
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.grid-justify-align {
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: end;
+}
+
+.grid-gallery .vertical {
+  grid-row: span 2;
+}
+.grid-gallery .horizontal {
+  grid-column: auto/span 2;
+}
+.grid-gallery .big {
+  grid-row: auto/span 2;
+  grid-column: auto/span 2;
+}
+.grid-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-auto-flow {
+  grid-auto-flow: dense;
+}
+
 .grid {
   height: 100vh;
   display: grid;
